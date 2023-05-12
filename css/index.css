@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'LeferiPoint-BlackA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackA.woff') format('woff');
+    font-weight:normal;
+    font-style: normal;
+}@font-face {
+    font-family: 'LeferiBaseType-RegularA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-RegularA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{margin: 0; padding: 0; font-family: 'LeferiBaseType-RegularA';}
+a{text-decoration: none;}
+li{list-style: none;}
+i, em, address {font-style: normal;}
+
+/*헤더*/
+#wrap {width: 100%; height: auto;}
+#header-pc {display: flex; justify-content: space-between; align-items: center; max-width: 1280px; height: 70px; margin: 0 auto; border: 1px solid red;}
+#header-pc h1{float: left; width: 110px; height:100%; cursor: pointer; border: 1px solid red; }
+#header-pc h1 > img{width: 110px; object-fit: cover; margin-top: 23px;}
+#header-pc nav {width: 85%; border: 1px solid red; }
+#header-pc ul.menu-pc{float: right;}
+#header-pc ul.menu-pc > li{float: left; margin: 0 40px 0 0;}
+#header-pc ul.menu-pc > li:last-of-type {margin: 0 20px 0 0;}
+#header-pc ul.menu-pc > li > a{font-size: 1rem; color: #073042; letter-spacing: 0; transition: 0.6s; font-weight: 700;}
+#header-pc ul.menu-pc > li > a:hover {color:#267e69;}
+
+#wrap p.bg-box {display: none; position: absolute; left: 0; top: 70px; width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, 0.5);}
+
+#header-pc ul.header-icon {float: right; width: 25px;}
+#header-pc ul.header-icon li {width: 100%; border: 1px solid red;}
+#header-pc ul.header-icon li:nth-of-type(1) {display: block; width: 100%; height: 30px; border: 1px solid red; background: url(../img/돋보기.png)no-repeat center; background-size: contain; cursor: pointer;}
+#header-pc ul.header-icon li:nth-of-type(2) {display: none; width: 100%; height: 30px; border: 1px solid red; background: url(../img/햄버거.png)no-repeat center; background-size: contain; cursor: pointer;}
+#header-pc ul.header-icon li:nth-of-type(2).on {margin-left: 50px; width: 20%; background: url(../img/닫기.png)no-repeat center; background-size: contain;}
+#header-pc ul.header-icon li:nth-of-type(1).on2 {display: none;}
+
+#header-m {position: relative; width: 100vw; height: 100vh; overflow: hidden;}
+#header-m .hambuger {position: absolute; right: -3000px;  width:100%; 
+           height:auto;  background-color: pink; opacity: 1; transition:0.5s !important;}
+#header-m .hambuger {padding: 60px 0 84px;}
+#header-m .hambuger li { width: 100%; padding: 20px 0; box-sizing: border-box; margin-bottom: 52px; padding-left: 32px;}
+#header-m .hambuger li a {font-size: 2rem; font-weight: 700; letter-spacing: -0.0625rem; color: #073042; transition: 0.3s;}
+#header-m .hambuger li a:hover {color:#267e69;}
+#header-m .hambuger.active{display: block; right: 0; width: 100%; height:auto;}
+#header-m .hambuger li:last-of-type a {font-weight: 400;}
+#header-m .hambuger li.underline {width: 90%; margin: 0 auto; margin-left: 36px;
+    margin-bottom: 52px; padding-left: 0px; border-bottom: 2px solid darkgray; opacity: 0.5;}
+
+
+/*매인*/
+#main {max-width: 1280px; height: auto;}
+#main .main-text {}
+#main .main-text > h1 {}
+#main .main-text > h1 > p{}
+#main .main-text > h1 > p > button{}
+
+
+
+/*모바일*/
+@media all and (max-width:1023px){
+    #header-pc {width: 100%; padding: 0 20px; box-sizing: border-box;}
+    #header-pc ul.menu-pc {display: none;}
+    #header-pc nav {display: none;}
+
+    #header-pc ul.header-icon {display: flex; width:98px;}
+    #header-pc ul.header-icon li{margin-right: 1.7rem;}
+    #header-pc ul.header-icon li:nth-of-type(2) {display: block;}
+    
+}
