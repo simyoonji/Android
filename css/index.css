@@ -55,8 +55,8 @@ animation-iteration-count:1; animation: icon 3s;}
 #header-pc ul.header-icon li:nth-of-type(1).on2 {display: none;}
 
 /*헤더-모바일*/
-#header-m {display: none; position: fixed; right: 0; top: 0; z-index: 3000; width: 100vw; height: 100%; background: #fff;}
-#header-m .hambuger {position: absolute; right: -100%; top: 0; width:100vw; padding: 90px 0 0 0; transition: 0.4s;}
+#header-m {display: none; position: fixed; right: 0; top: 0; z-index: 3000; width: 100%; height: 100vh; background: #fff;}
+#header-m .hambuger {right: -100%; top: 0; width:100vw; padding: 90px 0 0 0; transition: 0.4s;}
 #header-m .hambuger.on{right: 0;}
 #header-m .hambuger li { width: 100%; padding: 20px 0; box-sizing: border-box; padding-left: 32px;}
 #header-m .hambuger li:last-of-type {margin-bottom: 0;}
@@ -64,10 +64,8 @@ animation-iteration-count:1; animation: icon 3s;}
 #header-m .hambuger li a:hover {color:#267e69;}
 #header-m .hambuger.active{display: block; right: 0; width: 100%; height:auto;}
 #header-m .hambuger li:last-of-type a {font-weight: 400;}
-#header-m .hambuger li.underline {width: 90%; margin: 0 auto; margin-left: 36px; margin-bottom: 52px; padding-left: 0px; border-bottom: 2px solid darkgray; opacity: 0.5;}
-#header-m select { margin-left: 55px; border: 0; box-sizing: content-box; cursor: pointer;}
-#header-m .select-icon {position: absolute; left: 28px; bottom: 0px; width: 22px;}
-
+#header-m .hambuger li.underline {width: 90%; margin: 0 auto; margin-left: 36px; margin-bottom: 40px; padding-left: 0px; border-bottom: 2px solid darkgray; opacity: 0.5;}
+#header-m select {position: relative; left: 30px; cursor: pointer; padding: 20px 0; box-sizing: border-box;}
 body.scroll{overflow-y: hidden;}
 
 /*헤더 검색창*/
@@ -92,10 +90,10 @@ margin-right: 10px;}
 #main .main-text p { margin-top: 25px; animation-iteration-count:1; animation: text-p 3s; animation-delay: 0.01s;}
 @keyframes text-p {0% {margin-top: 40px; opacity:0;} 100% {margin-top: 25px; opacity:1;}}
 #main .main-text > button{position: relative; width: 205px; height: 55px; margin-top: 35px; background-color: #073042; color: #fff; border: none; border-radius: 40px;   text-align: center; cursor: pointer;
-animation: main-btn 3s; cursor: pointer; animation-delay: 0.02s; overflow: hidden;}
+animation: main-btn 3s; cursor: pointer; animation-delay: 0.02s; overflow: hidden; z-index: 1;}
 #main .main-text button > a {position: absolute; left: 50%; top: 0; margin-left: -74.905px; margin-top: 20px; z-index: 2; }
 #main .btn-hover1 {position: absolute; left: 0; top: 0; width: 205.95px; height: 55.5px; border-radius: 40px; background-color: #30DE81; 
-  transform: translateX(-206px); transition: 0.8s; z-index: 1;}
+  transform: translateX(-206px); transition: 0.8s; z-index: -1;}
 @keyframes main-btn {0% {margin-top: 55px; opacity:0;}100% {margin-top: 35px; opacity:1;}}
 
 #main div.main-img-pc {position: relative; width: 55%; height: auto !important;}
@@ -123,22 +121,22 @@ animation: main-btn 3s; cursor: pointer; animation-delay: 0.02s; overflow: hidde
 #section1 .section1-1 span{width: 2%; background-color: #fff;}
 #section1 figure{width: 100%; border-radius: 20px;}
 #section1 figure.section1-img {margin-bottom: 8px;}
-#section1 figure.section1-1-img {}
 /*이미지*/
 #section1 .section1-pc-img {display: block; width: 100%; height: 450px; object-fit: cover; border-radius: 20px;}
 #section1 .section1-m-img {display: none; width: 100%; border-radius: 15px;}
 #section1 .section1-2-pc-img {width: 100%; height: 450px; object-fit: cover; border-radius: 20px;}
+
 /*섹션1 텍스트*/
-#section1 figcaption {display: flex; flex-direction: column; justify-content: space-between; width: 100%; height: 250px;}
-#section1 figcaption h2 {font-size: 2.2rem;}
-#section1 figcaption .section-h2-pc {}
-#section1 figcaption .section-h2-pc2 {}
-#section1 figcaption .section-h2-m {display: none;}
-#section1 figcaption .section-h2-m2 {display: none;}
-#section1 figcaption p {}
-#section1 figcaption button {position: relative; align-items: center; border: 1px solid #073042; border-radius: 40px; background-color: #fff; 
+#section1 .section1-txt {display: flex; flex-direction: column; justify-content: space-between; width: 100%; height: 250px;}
+#section1 .section1-txt h2 {font-size: 2.2rem;}
+#section1 .section1-txt .section-h2-pc {}
+#section1 .section1-txt .section-h2-pc2 {}
+#section1 .section1-txt .section-h2-m {display: none;}
+#section1 .section1-txt .section-h2-m2 {display: none;}
+#section1 .section1-txt p {}
+#section1 .section1-txt button {position: relative; align-items: center; border: 1px solid #073042; border-radius: 40px; background-color: #fff; 
 min-width: 80px; width: 200px; height: 54.4px; transition: color .4s linear; z-index: 1; cursor: pointer; overflow: hidden;}
-#section1 figcaption button > a {position: absolute; left: 50%; top: 0; margin-left: -56.465px; margin-top: 20px; z-index: 2; color: #073042; font-weight: 600;}
+#section1 .section1-txt button > a {position: absolute; left: 50%; top: 0; margin-left: -56.465px; margin-top: 20px; z-index: 2; color: #073042; font-weight: 600;}
 #section1 .btn-hover {position: absolute; left: 0; top: 0; width: 198px; height: 52px; border-radius: 40px; background-color: #ecfbf3; 
   transform: translateX(-199px); transition: 0.8s; z-index: 1;}
 
@@ -180,16 +178,16 @@ min-width: 80px; width: 200px; height: 54.4px; transition: color .4s linear; z-i
 #section3 .section3-m-img {display: none; width: 100%; border-radius: 15px;}
 #section3 .section3-2-pc-img {width: 100%; height: 450px; object-fit: cover; border-radius: 20px;}
 /*섹션1 텍스트*/
-#section3 figcaption {display: flex; flex-direction: column; justify-content: space-between; width: 100%; height: 250px;}
-#section3 figcaption h2 {font-size: 2.2rem;}
-#section3 figcaption .section3-h2-pc {}
-#section3 figcaption .section3-h2-pc2 {}
-#section3 figcaption .section3-h2-m {display: none;}
-#section3 figcaption .section3-h2-m2 {display: none;}
-#section3 figcaption p {}
-#section3 figcaption button {position: relative; border: 1px solid #073042; border-radius: 40px; background-color: #fff; 
+#section3 .section3-txt {display: flex; flex-direction: column; justify-content: space-between; width: 100%; height: 250px;}
+#section3 .section3-txt h2 {font-size: 2.2rem;}
+#section3 .section3-txt .section3-h2-pc {}
+#section3 .section3-txt .section3-h2-pc2 {}
+#section3 .section3-txt .section3-h2-m {display: none;}
+#section3 .section3-txt .section3-h2-m2 {display: none;}
+#section3 .section3-txt p {}
+#section3 .section3-txt button {position: relative; border: 1px solid #073042; border-radius: 40px; background-color: #fff; 
   min-width: 80px; width: 200px; height: 54.4px; transition: color .4s linear; z-index: 1; cursor: pointer; overflow: hidden;}
-#section3 figcaption button > a {position: absolute; left: 50%; top: 0; margin-left: -56.465px; margin-top: 20px; z-index: 2; color: #073042; font-weight: 600;}
+#section3 .section3-txt button > a {position: absolute; left: 50%; top: 0; margin-left: -56.465px; margin-top: 20px; z-index: 2; color: #073042; font-weight: 600;}
 
 /**/
 .btn-hover {position: absolute; left: 0; top: 0; width: 198px; height: 52px; border-radius: 40px; background-color: #ecfbf3; 
@@ -211,16 +209,16 @@ transform:translateX(-199px); transition: 0.8s; z-index: 1;}
 #section4 .section4-m-img {display: none; width: 100%; border-radius: 15px;}
 #section4 .section4-2-pc-img {width: 100%; height: 450px; object-fit: cover; border-radius: 20px;}
 /*섹션4 텍스트*/
-#section4 figcaption {display: flex; flex-direction: column; justify-content: space-between; width: 100%; height: 250px;}
-#section4 figcaption h2 {font-size: 2.2rem;}
-#section4 figcaption .section4-h2-pc {}
-#section4 figcaption .section4-h2-pc2 {}
-#section4 figcaption .section4-h2-m {display: none;}
-#section4 figcaption .section4-h2-m2 {display: none;}
-#section4 figcaption p {}
-#section4 figcaption button {position: relative; border: 1px solid #073042; border-radius: 40px; background-color: #fff; 
+#section4 .section4-txt {display: flex; flex-direction: column; justify-content: space-between; width: 100%; height: 250px;}
+#section4 .section4-txt h2 {font-size: 2.2rem;}
+#section4 .section4-txt .section4-h2-pc {}
+#section4 .section4-txt .section4-h2-pc2 {}
+#section4 .section4-txt .section4-h2-m {display: none;}
+#section4 .section4-txt .section4-h2-m2 {display: none;}
+#section4 .section4-txt p {}
+#section4 .section4-txt button {position: relative; border: 1px solid #073042; border-radius: 40px; background-color: #fff; 
   min-width: 80px; width: 200px; height: 54.4px; transition: color .4s linear; z-index: 1; cursor: pointer; overflow: hidden;}
-#section4 figcaption button > a {position: absolute; left: 50%; top: 0; margin-left: -56.465px; margin-top: 20px; z-index: 2; color: #073042; font-weight: 600;}
+#section4 .section4-txt button > a {position: absolute; left: 50%; top: 0; margin-left: -56.465px; margin-top: 20px; z-index: 2; color: #073042; font-weight: 600;}
 
 	/*섹션5*/
   #section5 {width: 100%; padding: 80px 112px; box-sizing: border-box; overflow: hidden;}
@@ -326,16 +324,16 @@ border: 0; box-sizing: content-box; padding: 8px 0; cursor: pointer; line-height
 }
 /*-------------------------------------------------------------------------------------------------*/
 @media all and (max-width:1172px){
- #header-m .hambuger.active{display: none !important;}
+ #header-m .hambuger.active {display: none !important;}
 /*섹션1 텍스트*/
-#section1 figcaption .section-h2-pc {display: none;}
-#section1 figcaption .section-h2-m {display: block;}
+#section1 .section1-txt .section-h2-pc {display: none;}
+#section1 .section1-txt .section-h2-m {display: block;}
 /*섹션3 텍스트*/
-#section3 figcaption .section3-h2-pc {display: none;}
-#section3 figcaption .section3-h2-m {display: block;}
+#section3 .section3-txt .section3-h2-pc {display: none;}
+#section3 .section3-txt .section3-h2-m {display: block;}
 /*섹션4 텍스트*/
-#section4 figcaption .section4-h2-pc {display: none;}
-#section4 figcaption .section4-h2-m {display: block;}
+#section4 .section4-txt .section4-h2-pc {display: none;}
+#section4 .section4-txt .section4-h2-m {display: block;}
 
 #footer-m {display: none;}
 }
@@ -372,9 +370,9 @@ border: 0; box-sizing: content-box; padding: 8px 0; cursor: pointer; line-height
 #section1 .section1-m-img {display: block;}
 #section1 .section1-2-pc-img {display: none;}
 /*섹션1 텍스트*/
-#section1 figcaption {width: 90%; height: 300px;}
-#section1 figcaption .section-h2-pc {display: none;}
-#section1 figcaption .section-h2-m {display: block;}
+#section1 .section1-txt {width: 90%; height: 300px;}
+#section1 .section1-txt .section-h2-pc {display: none;}
+#section1 .section1-txt .section-h2-m {display: block;}
 /*섹션2*/
 #section2 ul {display: block; width: 100%; margin-bottom: 3rem;}
 #section2 ul li { margin: 0 auto;}
@@ -402,9 +400,9 @@ border: 0; box-sizing: content-box; padding: 8px 0; cursor: pointer; line-height
 #section3 .section3-m-img {display: block;}
 #section3 .section3-2-pc-img {display: none;}
 /*섹션3 텍스트*/
-#section3 figcaption {width: 90%; height: 300px;}
-#section3 figcaption .section3-h2-pc {display: none;}
-#section3 figcaption .section3-h2-m {display: block;}
+#section3 .section3-txt {width: 90%; height: 300px;}
+#section3 .section3-txt .section3-h2-pc {display: none;}
+#section3 .section3-txt .section3-h2-m {display: block;}
 
 /*섹션4*/
 #section4 {padding: 80px 32px; box-sizing: border-box;}
@@ -420,9 +418,9 @@ border: 0; box-sizing: content-box; padding: 8px 0; cursor: pointer; line-height
 #section4 .section4-m-img {display: block;}
 #section4 .section4-2-pc-img {display: none;}
 /*섹션4 텍스트*/
-#section4 figcaption {width: 90%; height: 300px;}
-#section4 figcaption .section4-h2-pc {display: none;}
-#section4 figcaption .section4-h2-m {display: block;}
+#section4 .section4-txt {width: 90%; height: 300px;}
+#section4 .section4-txt .section4-h2-pc {display: none;}
+#section4 .section4-txt .section4-h2-m {display: block;}
 /*섹션5*/
 #section5 {padding: 80px 32px;}
 #section5 .section5-1 {width: 100%; padding: 0 0 30px 0; display: block; text-align: center;}
@@ -459,27 +457,27 @@ border: 0; box-sizing: content-box; padding: 8px 0; cursor: pointer; line-height
 /*-------------------------------------------------------------------------------------------------*/
 @media all and (max-width:814px){
  
-#section1 figcaption .section-h2-pc2 {display: none;}
-#section1 figcaption .section-h2-m2 {display: block;}
+#section1 .section1-txt .section-h2-pc2 {display: none;}
+#section1 .section1-txt .section-h2-m2 {display: block;}
 
-#section3 figcaption .section3-h2-pc2 {display: none;}
-#section3 figcaption .section3-h2-m2 {display: block;}
+#section3 .section3-txt .section3-h2-pc2 {display: none;}
+#section3 .section3-txt .section3-h2-m2 {display: block;}
 
-#section4 figcaption .section4-h2-pc2 {display: none;}
-#section4 figcaption .section4-h2-m2 {display: block;}
+#section4 .section4-txt .section4-h2-pc2 {display: none;}
+#section4 .section4-txt .section4-h2-m2 {display: block;}
 
 }
 
 /*-------------------------------------------------------------------------------------------------*/
 @media all and (max-width:779px){
 #section1 {padding: 80px 32px; box-sizing: border-box;}
-#section1 figcaption {height: 340px;}
+#section1 .section1-txt {height: 340px;}
 
 #section3 {padding: 80px 32px; box-sizing: border-box;}
-#section3 figcaption {height: 340px;}
+#section3 .section3-txt {height: 340px;}
 
 #section4 {padding: 80px 32px; box-sizing: border-box;}
-#section4 figcaption {height: 340px;}
+#section4 .section4-txt {height: 340px;}
 
 }
 
@@ -517,13 +515,13 @@ margin-left: 0px; width: 100%; height: 54px; display: none; background-color: #f
 #section1 figure.section1-img {margin-bottom: 25px;}
 #section1 figure.section1-1-img {margin-bottom: 25px;}
 /*섹션1 텍스트*/
-#section1 figcaption {width: 100%; height: 250px;}
-#section1 figcaption:nth-of-type(1) {width: 100%; height: 300px;}
-#section1 figcaption .section-h2-pc {display: block;}
-#section1 figcaption .section-h2-m {display: none;}
-#section1 figcaption .section-h2-pc2 {display: block;}
-#section1 figcaption .section-h2-m2 {display: none;}
-#section1 figcaption p {margin-bottom: 14px;}
+#section1 .section1-txt {width: 100%; height: 250px;}
+#section1 .section1-txt:nth-of-type(1) {width: 100%; height: 300px;}
+#section1 .section1-txt .section-h2-pc {display: block;}
+#section1 .section1-txt .section-h2-m {display: none;}
+#section1 .section1-txt .section-h2-pc2 {display: block;}
+#section1 .section1-txt .section-h2-m2 {display: none;}
+#section1 .section1-txt p {margin-bottom: 14px;}
 
 /*섹션2*/
 #section2 ul li:nth-of-type(1){width: 100%; padding:0 15px; box-sizing: border-box;}
@@ -542,13 +540,13 @@ margin-left: 0px; width: 100%; height: 54px; display: none; background-color: #f
 #section3 figure.section3-img {margin-bottom: 25px;}
 #section3 figure.section3-1-img {margin-bottom: 25px;}
 /*섹션3 텍스트*/
-#section3 figcaption {width: 100%; height: 250px;}
-#section3 figcaption .section3-h2-pc {display: block;}
-#section3 figcaption .section3-h2-m {display: none;}
-#section3 figcaption .section3-h2-pc2 {display: block;}
-#section3 figcaption .section3-h2-m2 {display: none;}
-#section3 figcaption p {margin-bottom: 14px;}
-#section3 figcaption button {padding: 12px 20px; width: 170px;}
+#section3 .section3-txt {width: 100%; height: 250px;}
+#section3 .section3-txt .section3-h2-pc {display: block;}
+#section3 .section3-txt .section3-h2-m {display: none;}
+#section3 .section3-txt .section3-h2-pc2 {display: block;}
+#section3 .section3-txt .section3-h2-m2 {display: none;}
+#section3 .section3-txt p {margin-bottom: 14px;}
+#section3 .section3-txt button {padding: 12px 20px; width: 170px;}
 
 /*섹션4*/ 
 #section4 { padding:65px 15px; box-sizing: border-box;}
@@ -560,13 +558,13 @@ margin-left: 0px; width: 100%; height: 54px; display: none; background-color: #f
 #section4 figure.section4-img {margin-bottom: 25px;}
 #section4 figure.section4-1-img {margin-bottom: 25px;}
 /*섹션4 텍스트*/
-#section4 figcaption {width: 100%; height: 250px;}
-#section4 figcaption .section4-h2-pc {display: block;}
-#section4 figcaption .section4-h2-m {display: none;}
-#section4 figcaption .section4-h2-pc2 {display: block;}
-#section4 figcaption .section4-h2-m2 {display: none;}
-#section4 figcaption p {margin-bottom: 14px;}
-#section4 figcaption button {padding: 12px 20px; width: 170px;}
+#section4 .section4-txt {width: 100%; height: 250px;}
+#section4 .section4-txt .section4-h2-pc {display: block;}
+#section4 .section4-txt .section4-h2-m {display: none;}
+#section4 .section4-txt .section4-h2-pc2 {display: block;}
+#section4 .section4-txt .section4-h2-m2 {display: none;}
+#section4 .section4-txt p {margin-bottom: 14px;}
+#section4 .section4-txt button {padding: 12px 20px; width: 170px;}
 
 #section5 {padding: 65px 15px;}
 #section5 .swiper-container {padding: 0 30px; box-sizing: border-box; }
@@ -606,12 +604,12 @@ margin-left: 0px; width: 100%; height: 54px; display: none; background-color: #f
   #main div.main-img-m-inner span:nth-of-type(3) img{ height:215px; margin-top: 98px;}
 
 /*섹션1*/
-#section1 figcaption {width: 100%; height: 250px;}
-#section1 figcaption h2 {font-size: 1.5rem;}
-#section1 figcaption .section-h2-pc {display: none; margin-bottom: 10px;}
-#section1 figcaption .section-h2-m {display: block; margin-bottom: 10px;}
-#section1 figcaption .section-h2-pc2 {}
-#section1 figcaption p {margin-bottom: 24px;}
+#section1 .section1-txt {width: 100%; height: 250px;}
+#section1 .section1-txt h2 {font-size: 1.5rem;}
+#section1 .section1-txt .section-h2-pc {display: none; margin-bottom: 10px;}
+#section1 .section1-txt .section-h2-m {display: block; margin-bottom: 10px;}
+#section1 .section1-txt .section-h2-pc2 {}
+#section1 .section1-txt p {margin-bottom: 24px;}
 
 /*섹션2*/
 #section2 ul {padding: 0 15px; box-sizing: border-box; margin-top: 3.5rem;}
@@ -622,20 +620,20 @@ margin-left: 0px; width: 100%; height: 54px; display: none; background-color: #f
 #section2 > div > p{}
 
 /*섹션3*/
-#section3 figcaption {width: 100%; height: 250px;}
-#section3 figcaption h2 {font-size: 1.5rem;}
-#section3 figcaption .section3-h2-pc {display: none; margin-bottom: 10px;}
-#section3 figcaption .section3-h2-m {display: block; margin-bottom: 10px;}
-#section3 figcaption .section3-h2-pc2 {}
-#section3 figcaption p {margin-bottom: 24px;}
+#section3 .section3-txt {width: 100%; height: 250px;}
+#section3 .section3-txt h2 {font-size: 1.5rem;}
+#section3 .section3-txt .section3-h2-pc {display: none; margin-bottom: 10px;}
+#section3 .section3-txt .section3-h2-m {display: block; margin-bottom: 10px;}
+#section3 .section3-txt .section3-h2-pc2 {}
+#section3 .section3-txt p {margin-bottom: 24px;}
 
 /*섹션4*/
-#section4 figcaption {width: 100%; height: 250px;}
-#section4 figcaption h2 {font-size: 1.5rem;}
-#section4 figcaption .section4-h2-pc {display: none; margin-bottom: 10px;}
-#section4 figcaption .section4-h2-m {display: block; margin-bottom: 10px;}
-#section4 figcaption .section4-h2-pc2 {}
-#section4 figcaption p {margin-bottom: 24px;}
+#section4 .section4-txt {width: 100%; height: 250px;}
+#section4 .section4-txt h2 {font-size: 1.5rem;}
+#section4 .section4-txt .section4-h2-pc {display: none; margin-bottom: 10px;}
+#section4 .section4-txt .section4-h2-m {display: block; margin-bottom: 10px;}
+#section4 .section4-txt .section4-h2-pc2 {}
+#section4 .section4-txt p {margin-bottom: 24px;}
 
 #footer-m > nav {padding-left: 0; padding: 0px 15px;}
 }
