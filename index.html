@@ -6,12 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/안드로이드 파비콘.ico">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- css -->
     <link href="css/index.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <title>Android | 가능성의 지평을 더욱 넓혀 주는 플랫폼</title>
 </head>
 
-<body style="overflow-x: hidden">
+<body>
     <div id="container"></div>
     <div id="wrap">
         <!--헤더pc-->
@@ -372,50 +375,32 @@
         </div>
     </section>
 
+    <!-- section5 -->
     <section id="section5">
-        <div>
-            <ul>
-                <li>
-                    <h2>다양한 최신 정보</h2>
-                </li>
-                <li>
-                    <p>최신 OS 업데이트, 중대한 발표 및 최신 플랫폼 뉴스와 같은
-                        Android의 새로운 소식을 여기에서 확인할 수 있습니다.</p>
-                    <span></span>
-                </li>
-
-            </ul>
-
-            <div class="container">
-                <div>
-                    <ul class="wrapper">
-                        <li class="slide slide1">
-                            <div class="box-hover"></div>
-                            <h1>안드로이드를 탐색하는 새로운 방법(GO버전)</h1>
-                            <a href="#">전문 읽기 <span><img src="img/화살표1.png" alt="arrow1"></span></a>
-
-                        </li>
-                        <li class="slide slide2">
-                            <div class="box-hover"></div>
-                            <h1>고급 보호가 가장 필요한 사용자에게 제공</h1>
-                            <a href="#">전문 읽기<span><img src="img/화살표1.png" alt="arrow1"></span></a>
-
-                        </li>
-                        <li class="slide slide3">
-                            <div class="box-hover"></div>
-                            <h1>Android 10에 관해 알아야 할 10가지</h1>
-                            <a href="#">전문 읽기<span><img src="img/화살표1.png" alt="arrow1"></span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <div class="section5-1">
+            <h2>다양한 최신 정보</h2>
+            <p>최신 OS 업데이트, 중대한 발표 및 최신 플랫폼 뉴스와 같은
+                Android의 새로운 소식을 여기에서 확인할 수 있습니다.
+            </p>
         </div>
-        <div class="btn-box">
-            <button class="x-scroll"><span></span></button>
 
-            <div>
-                <button class="lf"></button>
-                <button class="rt"></button>
+        <div class="swiper-container swiper">
+            <div class="swiper-wrapper">
+                <!--  -->
+                <div class="swiper-slide">
+                    <h3>안드로이드를 탐색하는 새로운 방법(GO버전)</h3>
+                    <a href="#">전문 읽기 </a>
+                </div>
+                <!--  -->
+                <div class="swiper-slide">
+                    <h3>고급 보호가 가장 필요한 사용자에게 제공</h3>
+                    <a href="#">전문 읽기</a>
+                </div>
+                <!--  -->
+                <div class="swiper-slide">
+                    <h3>Android 10에 관해 알아야 할 10가지</h3>
+                    <a href="#">전문 읽기</a>
+                </div>
             </div>
         </div>
     </section>
@@ -733,6 +718,7 @@
     </footer>
 
     <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="script/script.js" defer></script>
 </body>
 

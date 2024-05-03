@@ -92,7 +92,6 @@ $('ul.header-icon > li:nth-of-type(2)').click(function(){
 
 //스크롤 이벤트
 $(window).scroll(function(){	
-			
     var scrollTop = $(this).scrollTop();
 
     for(i = 0; i < 60; i++){
@@ -100,7 +99,6 @@ $(window).scroll(function(){
         $('p').css({'right':(i * 25) - 2200 + 'px'});
         }
     }
-    
 });
 
 //푸터 이벤트
@@ -118,3 +116,37 @@ $("#footer-m > nav > ul > li").click(function() {
     $(this).toggleClass('change');
 });
 
+// swiper
+const swiper = new Swiper('.swiper', {
+    direction: 'horizontal',
+    grabCursor: true,
+    slidesPerView: "auto",
+
+    autoplay: {
+        delay: 10000,
+        disableOnInteraction: false, 
+    },
+    loop: true, 
+    
+    breakpoints: {
+      
+      320: {
+      slidesPerView: 1,
+      spaceBetween: 10
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 10
+      },
+     
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+     
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      }
+    }
+  });
