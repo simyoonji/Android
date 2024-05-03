@@ -89,11 +89,15 @@ margin-right: 10px;}
 #main .main-text .main-text-m {font-size: 52px; display: none;}
 #main .main-text p { margin-top: 25px; animation-iteration-count:1; animation: text-p 3s; animation-delay: 0.01s;}
 @keyframes text-p {0% {margin-top: 40px; opacity:0;} 100% {margin-top: 25px; opacity:1;}}
-#main .main-text > button{position: relative; width: 205px; height: 55px; margin-top: 35px; background-color: #073042; color: #fff; border: none; border-radius: 40px;   text-align: center; cursor: pointer;
+#main .main-text > button {position: relative; width: 205px; height: 55px; margin-top: 35px; background-color: #073042; color: #fff; border: none; border-radius: 40px;   text-align: center; cursor: pointer;
 animation: main-btn 3s; cursor: pointer; animation-delay: 0.02s; overflow: hidden; z-index: 1;}
-#main .main-text button > a {position: absolute; left: 50%; top: 0; margin-left: -74.905px; margin-top: 20px; z-index: 2; }
-#main .btn-hover1 {position: absolute; left: 0; top: 0; width: 205.95px; height: 55.5px; border-radius: 40px; background-color: #30DE81; 
-  transform: translateX(-206px); transition: 0.8s; z-index: -1;}
+#main .main-text > button::after {
+  content: ''; display: inline-block; position: absolute; left: 0; top: 0; width: 205.95px; height: 55.5px; border-radius: 40px; background-color: #30DE81; 
+  transform: translateX(-206px); transition: 0.8s; z-index: -1;
+}
+#main .main-text > button:hover::after {
+  transform: translateX(0px);
+}
 @keyframes main-btn {0% {margin-top: 55px; opacity:0;}100% {margin-top: 35px; opacity:1;}}
 
 #main div.main-img-pc {position: relative; width: 55%; height: auto !important;}
@@ -133,36 +137,32 @@ animation: main-btn 3s; cursor: pointer; animation-delay: 0.02s; overflow: hidde
 #section1 .section1-txt .section-h2-pc2 {}
 #section1 .section1-txt .section-h2-m {display: none;}
 #section1 .section1-txt .section-h2-m2 {display: none;}
-#section1 .section1-txt p {}
-#section1 .section1-txt button {position: relative; align-items: center; border: 1px solid #073042; border-radius: 40px; background-color: #fff; 
-min-width: 80px; width: 200px; height: 54.4px; transition: color .4s linear; z-index: 1; cursor: pointer; overflow: hidden;}
-#section1 .section1-txt button > a {position: absolute; left: 50%; top: 0; margin-left: -56.465px; margin-top: 20px; z-index: 2; color: #073042; font-weight: 600;}
-#section1 .btn-hover {position: absolute; left: 0; top: 0; width: 198px; height: 52px; border-radius: 40px; background-color: #ecfbf3; 
-  transform: translateX(-199px); transition: 0.8s; z-index: 1;}
+
+#section1 .section-btn {position: relative; align-items: center; border: 1px solid #073042; border-radius: 40px; background-color: #fff; 
+min-width: 80px; width: 200px; height: 54.4px; transition: color .4s linear; z-index: 1; cursor: pointer; overflow: hidden; z-index: 1;}
+#section1 .section-btn::after { content: ''; display: inline-block;  position: absolute; left: 0; top: 0; width: 198px; height: 52px; border-radius: 40px; background-color: #ecfbf3; 
+ transform: translateX(-199px); transition: 0.8s; z-index: -1;}
+#section1 .section-btn:hover::after {transform: translateX(0px);}
+
+
 
 /*섹션2*/
 #section2 {width: 100%;}
-#section2 ul {display: flex; max-width: 1280px; margin: 0 auto; margin-bottom: 3rem;}
-#section2 ul li {}
+#section2 ul {display: flex; justify-content: space-between; max-width: 1200px; margin: 0 auto; margin-bottom: 3rem;}
 #section2 ul li:nth-of-type(1){width: 40%; padding:0 50px;}
 #section2 ul li h2{font-size: 2.8rem; word-break: keep-all;}
-#section2 ul li:nth-of-type(2){width: 10%;}
-#section2 ul li:nth-of-type(3){display: flex; flex-direction: column; justify-content: space-between; width: 30%;}
-#section2 ul li > button {position: relative; width: 135px; height: 54.4px; background-color: #fff; border: 1px solid #073042; border-radius: 40px; overflow: hidden;}
-#section2 ul li > button > a {position: absolute; left: 50%; top: 0; margin-left: -31.03px; margin-top: 20px; z-index: 2; color: #073042; font-weight: 600;}
-#section2 .btn-hover {position: absolute; left: 0; top: 0; width: 135px; height: 54.4px; border-radius: 40px; background-color: #ecfbf3; 
-  transform: translateX(-136px); transition: 0.8s; z-index: 1;}
-
+#section2 ul li:nth-of-type(2){width: 450px;}
+#section2 ul li:nth-of-type(2) p {margin: 0 0 30px 0;}
+#section2 ul li:nth-of-type(2)::after {content: '';clear: both;display: table;}
+#section2 ul li > button {position: relative; float: right; width: 135px; height: 54.4px; border: 1px solid #073042; border-radius: 40px; overflow: hidden; background-color: #fff;
+z-index: 1;}
+#section2 ul li > button::after {content: ''; display: inline-block; position: absolute; left: 0; top: 0; width: 135px; height: 54.4px; border-radius: 40px; background-color: #ecfbf3; 
+transform: translateX(-136px); transition: 0.8s; z-index: -1;}
+#section2 ul li > button:hover::after {transform: translateX(0px);}
+    
 /*스크롤 이벤트*/
-#section2 ul li:nth-of-type(4){width: 10%;}
 #section2 > div {position: relative; height: 510px; transform: rotate(0); background-color: #fff; overflow: hidden;}
 #section2 > div > p{position: fixed; top:0; right: -2200px; transition: 0.3s; z-index: 500;}
-#section2 span {display: none; padding: 0 15px; box-sizing: border-box;}
-#section2 span p{margin-bottom: 2rem;}
-#section2 span > button {position: relative; width: 135px; height: 54.4px; background-color: #fff; border: 1px solid #073042; border-radius: 40px; overflow: hidden;}
-#section2 span > button > a {position: absolute; left: 50%; top: 0; margin-left: -31.03px; margin-top: 20px; z-index: 2; color: #073042; font-weight: 600;}
-#section2 span .btn-hover {position: absolute; left: 0; top: 0; width: 135px; height: 54.4px; border-radius: 40px; background-color: #ecfbf3; 
-  transform: translateX(-136px); transition: 0.8s; z-index: 1;}
 
 /*섹션3*/
 #section3 {width: 100%; padding: 112px 80px; box-sizing: border-box;}
@@ -177,17 +177,17 @@ min-width: 80px; width: 200px; height: 54.4px; transition: color .4s linear; z-i
 #section3 .section3-pc-img {display: block; width: 100%; height: 450px; object-fit: cover; border-radius: 20px;}
 #section3 .section3-m-img {display: none; width: 100%; border-radius: 15px;}
 #section3 .section3-2-pc-img {width: 100%; height: 450px; object-fit: cover; border-radius: 20px;}
-/*섹션1 텍스트*/
+/*섹션3 텍스트*/
 #section3 .section3-txt {display: flex; flex-direction: column; justify-content: space-between; width: 100%; height: 250px;}
 #section3 .section3-txt h2 {font-size: 2.2rem;}
-#section3 .section3-txt .section3-h2-pc {}
-#section3 .section3-txt .section3-h2-pc2 {}
 #section3 .section3-txt .section3-h2-m {display: none;}
 #section3 .section3-txt .section3-h2-m2 {display: none;}
-#section3 .section3-txt p {}
 #section3 .section3-txt button {position: relative; border: 1px solid #073042; border-radius: 40px; background-color: #fff; 
-  min-width: 80px; width: 200px; height: 54.4px; transition: color .4s linear; z-index: 1; cursor: pointer; overflow: hidden;}
-#section3 .section3-txt button > a {position: absolute; left: 50%; top: 0; margin-left: -56.465px; margin-top: 20px; z-index: 2; color: #073042; font-weight: 600;}
+  min-width: 80px; width: 200px; height: 54.4px; transition: color .4s linear; z-index: 1; cursor: pointer; overflow: hidden; z-index: 1;}
+#section3 .section3-txt button::after {
+  content: ''; display: inline-block; position: absolute; left: 0; top: 0; width: 200px; height: 54.4px; border-radius: 40px; background-color: #ecfbf3; 
+  transform: translateX(-200px); transition: 0.8s; z-index: -1;}
+#section3 .section3-txt button:hover::after {transform: translateX(0px);}
 
 /**/
 .btn-hover {position: absolute; left: 0; top: 0; width: 198px; height: 52px; border-radius: 40px; background-color: #ecfbf3; 
@@ -211,14 +211,14 @@ transform:translateX(-199px); transition: 0.8s; z-index: 1;}
 /*섹션4 텍스트*/
 #section4 .section4-txt {display: flex; flex-direction: column; justify-content: space-between; width: 100%; height: 250px;}
 #section4 .section4-txt h2 {font-size: 2.2rem;}
-#section4 .section4-txt .section4-h2-pc {}
-#section4 .section4-txt .section4-h2-pc2 {}
 #section4 .section4-txt .section4-h2-m {display: none;}
 #section4 .section4-txt .section4-h2-m2 {display: none;}
-#section4 .section4-txt p {}
 #section4 .section4-txt button {position: relative; border: 1px solid #073042; border-radius: 40px; background-color: #fff; 
-  min-width: 80px; width: 200px; height: 54.4px; transition: color .4s linear; z-index: 1; cursor: pointer; overflow: hidden;}
-#section4 .section4-txt button > a {position: absolute; left: 50%; top: 0; margin-left: -56.465px; margin-top: 20px; z-index: 2; color: #073042; font-weight: 600;}
+  min-width: 80px; width: 200px; height: 54.4px; transition: color .4s linear; z-index: 1; cursor: pointer; overflow: hidden; z-index: 1;}
+#section4 .section4-txt button::after {
+  content: ''; display: inline-block; position: absolute; left: 0; top: 0; width: 200px; height: 54.4px; border-radius: 40px; background-color: #ecfbf3; 
+  transform: translateX(-200px); transition: 0.8s; z-index: -1;}
+#section4 .section4-txt button:hover::after {transform: translateX(0px);}
 
 	/*섹션5*/
   #section5 {width: 100%; padding: 80px 112px; box-sizing: border-box; overflow: hidden;}
@@ -373,18 +373,15 @@ border: 0; box-sizing: content-box; padding: 8px 0; cursor: pointer; line-height
 #section1 .section1-txt {width: 90%; height: 300px;}
 #section1 .section1-txt .section-h2-pc {display: none;}
 #section1 .section1-txt .section-h2-m {display: block;}
+
 /*섹션2*/
 #section2 ul {display: block; width: 100%; margin-bottom: 3rem;}
 #section2 ul li { margin: 0 auto;}
 #section2 ul li:nth-of-type(1){width: 68%; padding:0; margin-bottom: 3rem;}
-#section2 ul li h2{font-size: 2.8rem; word-break: keep-all;}
-#section2 ul li:nth-of-type(2){display: none; width: 0%;}
-#section2 ul li:nth-of-type(3){width: 68%;}
-#section2 ul li:nth-of-type(3) > p {width: 100%; margin-bottom: 1.2rem;}
-#section2 ul li:nth-of-type(4){display: none; width: 0%;}
-#section2 > div {}
-#section2 > div > p{}
-#section2 > div > p > img{height: 350px;}
+#section2 ul li h2 {font-size: 2.8rem; word-break: keep-all;}
+#section2 ul li:nth-of-type(2) {width: 500px;}
+#section2 ul li:nth-of-type(2) > p {margin-bottom: 1.2rem;}
+#section2 > div > p > img {height: 350px;}
 
 /*섹션3*/
 #section3 {padding: 80px 32px; box-sizing: border-box;}
@@ -395,10 +392,12 @@ border: 0; box-sizing: content-box; padding: 8px 0; cursor: pointer; line-height
 #section3 figure{width: 100%;}
 #section3 figure.section3-img {margin-bottom: 15px;}
 #section3 figure.section3-1-img {margin-bottom: 14px;}
+
 /*이미지*/
 #section3 .section3-pc-img {display: none;}
 #section3 .section3-m-img {display: block;}
 #section3 .section3-2-pc-img {display: none;}
+
 /*섹션3 텍스트*/
 #section3 .section3-txt {width: 90%; height: 300px;}
 #section3 .section3-txt .section3-h2-pc {display: none;}
@@ -441,12 +440,14 @@ border: 0; box-sizing: content-box; padding: 8px 0; cursor: pointer; line-height
 
 /*-------------------------------------------------------------------------------------------------*/
 @media all and (max-width:887px){
-  #main .main-text {margin-top: 0px; }
-  #main .main-text h1 {display: block; margin-top: 0;}
-  #main .main-text h1.main-text-m { display: none;}
+#main .main-text {margin-top: 0px; }
+#main .main-text h1 {display: block; margin-top: 0;}
+#main .main-text h1.main-text-m { display: none;}
 
 #section1 .section-h2-m  {display: block;}
 #section1 .section-h2-m2  {display: none;}
+
+#section2 ul li > button {float: left;}
 
 #section3 .section3-h2-m  {display: block;}
 #section3 .section3-h2-m2  {display: none;}
@@ -524,12 +525,13 @@ margin-left: 0px; width: 100%; height: 54px; display: none; background-color: #f
 #section1 .section1-txt p {margin-bottom: 14px;}
 
 /*섹션2*/
+#section2 ul {margin-bottom: 2rem; padding: 30px 15px; box-sizing: border-box;}
 #section2 ul li:nth-of-type(1){width: 100%; padding:0 15px; box-sizing: border-box;}
-#section2 ul li:nth-of-type(3){display: none;}
-#section2 span {display: block;}
+#section2 ul li h2 {font-size: 2.2rem;}
+#section2 ul li:nth-of-type(2) {width: 100%;}
 #section2 > div {height: 320px;}
-#section2 > div > p{}
 #section2 > div > p > img{height: 300px;}
+
 /*섹션3*/ 
 #section3 { padding:65px 15px; box-sizing: border-box;}
 #section3 .section3-1 {display: block; width: 100%;}
@@ -539,6 +541,7 @@ margin-left: 0px; width: 100%; height: 54px; display: none; background-color: #f
 #section3 figure{width: 100%;}
 #section3 figure.section3-img {margin-bottom: 25px;}
 #section3 figure.section3-1-img {margin-bottom: 25px;}
+
 /*섹션3 텍스트*/
 #section3 .section3-txt {width: 100%; height: 250px;}
 #section3 .section3-txt .section3-h2-pc {display: block;}
